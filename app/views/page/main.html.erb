@@ -1,6 +1,9 @@
 <h1>Page#main</h1>
 <p>Find me in app/views/page/main.html.erb</p>
 
-<%= form_for @images do |form| %>
+<%= form_for @image do |form| %>
+  <%= form.label :photo %>:
   <%= form.attachment_field :photo %>
+
+  <%= form.submit %>
 <% end %>

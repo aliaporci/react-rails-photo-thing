@@ -1,5 +1,9 @@
 class PageController < ApplicationController
   def main
-    @images = Image.all
+    @image = Image.new
+  end
+
+  def image_params
+    params.require(:image).permit(:photo)
   end
 end
