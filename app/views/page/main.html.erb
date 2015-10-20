@@ -8,3 +8,9 @@
     <%= f.button :submit, "Upload", class: "btn btn-sm" %>
   <% end %>
 </div>
+
+<% @images.each do |image| %>
+  <%= image_tag attachment_url(image, :photo) %>
+<% end %>
+
+<%= react_component ('Gallery') %>

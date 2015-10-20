@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   post 'images' => 'images#create', as: :images
 
+  namespace :api do
+    get 'images' => 'images#index'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
